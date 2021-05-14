@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="649.0" style="-fx-background-color: rgb(128,128,128);" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ControllerAgenda">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+   </padding>
+   <children>
+      <Label layoutX="45.0" layoutY="50.0" prefHeight="32.0" prefWidth="0.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="66.0" prefHeight="278.0" prefWidth="627.0" style="-fx-background-color: rgb(150,150,150);" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label layoutX="31.0" layoutY="26.0" text="Id:">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="66.0" text="Nome:">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="107.0" text="Sobrenome:">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="32.0" layoutY="147.0" text="Idade:">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="190.0" text="Telefone:">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="idContato" editable="false" layoutX="199.0" layoutY="23.0" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(200,200,200);" />
+            <TextField fx:id="nome" layoutX="199.0" layoutY="63.0" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(200,200,200);" />
+            <TextField fx:id="sobrenome" layoutX="199.0" layoutY="104.0" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(200,200,200);" />
+            <TextField fx:id="idade" layoutX="199.0" layoutY="144.0" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(200,200,200);" />
+            <TextField fx:id="telefone" layoutX="199.0" layoutY="187.0" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(200,200,200);" />
+            <Button layoutX="199.0" layoutY="229.0" mnemonicParsing="false" onAction="#cadastrarContato" prefHeight="25.0" prefWidth="229.0" style="-fx-background-color: rgb(128,128,128);" text="Cadastrar">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="484.0" layoutY="76.0" mnemonicParsing="false" onAction="#detalhesContato" prefWidth="100.0" style="-fx-background-color: rgb(128,128,128);" text="Listar">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Label layoutX="480.0" layoutY="39.0" text="Outras opções...">
+               <font>
+                  <Font name="Century Schoolbook Italic" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="484.0" layoutY="125.0" mnemonicParsing="false" onAction="#alterarContato" prefWidth="100.0" style="-fx-background-color: rgb(128,128,128);" text="Alterar">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="484.0" layoutY="175.0" mnemonicParsing="false" onAction="#deletarContato" prefWidth="100.0" style="-fx-background-color: rgb(128,128,128);" text="Deletar">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Separator layoutY="272.0" prefHeight="3.0" prefWidth="627.0" />
+            <TableView fx:id="tabelaAgenda" layoutX="64.0" layoutY="293.0" prefHeight="200.0" prefWidth="500.0">
+              <columns>
+                <TableColumn fx:id="idTabela" prefWidth="62.0" text="Id" />
+                <TableColumn fx:id="nomeTabela" prefWidth="115.0" text="Nome" />
+                  <TableColumn fx:id="sobreTabela" prefWidth="131.0" text="Sobrenome" />
+                  <TableColumn fx:id="idadeTabela" prefWidth="62.0" text="Idade" />
+                  <TableColumn fx:id="telTabela" prefWidth="129.0" text="Telefone" />
+              </columns>
+            </TableView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </Pane>
+      <Label layoutX="187.0" layoutY="14.0" prefHeight="57.0" prefWidth="275.0" text="Agenda Java">
+         <font>
+            <Font name="Century Schoolbook" size="45.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
